@@ -11,6 +11,7 @@ export function createRandomControl(): Control {
   const tolerance = faker.number.float({ min: 0, max: 100, precision: 0.01 });
   const dev = expectedIdealSize - realSize;
   return {
+    _id: faker.string.uuid(),
     feature: faker.helpers.arrayElement(["seam", "slot", "hole"]),
     measuredParameter: faker.helpers.arrayElement([
       "length",

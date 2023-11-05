@@ -21,6 +21,7 @@ export function cerateRandomPart(): Part {
   );
 
   return {
+    _id: faker.string.uuid(),
     name: faker.helpers.arrayElement([
       "door",
       "engine",

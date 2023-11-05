@@ -1,7 +1,10 @@
+import { Controls } from "./pages";
+
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">ABB-FullStack-Assignment</h1>
+    <div className="App">
+      <h1>ABB Full Stack Assignment</h1>
+      <Controls />
     </div>
   );
 }

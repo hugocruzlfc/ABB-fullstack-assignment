@@ -3,10 +3,6 @@ import { cerateRandomPart } from "../libs";
 
 export const getPart = async (req: Request, res: Response) => {
   try {
-    res.setHeader("Content-Type", "text/event-stream");
-    res.setHeader("Cache-Control", "no-cache");
-    res.setHeader("Connection", "keep-alive");
-
     // return res.status(200).json(part);
 
     setInterval(() => {
