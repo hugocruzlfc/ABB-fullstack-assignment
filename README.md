@@ -10,4 +10,4 @@
 
 ## Client description
 
-### Client is built using Vite, React.js, TailwindCss, and TypeScript. In addition, dependencies such as Axios.
+### Client is built using Vite, React.js, TailwindCss, and TypeScript.
