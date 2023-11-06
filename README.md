@@ -10,4 +10,4 @@
 
 ## Client description
 
-### Client is built using Vite, React.js, TailwindCss, and TypeScript.
+### Client is built using Vite, React.js, TailwindCss, TypeScript and Zustand for state management.

@@ -9,17 +9,16 @@ export interface PartProps {
 
 const Part: React.FC<PartProps> = ({ part }) => {
   return (
-    <div>
-      <h2 className="uppercase">Cart Part: {part.name}</h2>
-      <Link to={`/parts/${part._id}`}>
+    <div className="flex items-center space-x-5 bg-zinc-300 hover:bg-zinc-500 font-bold py-2 px-4 rounded-full">
+      <h2>
+        Cart Part: <span className="uppercase">{part.name}</span>
+      </h2>
+      <Link
+        className="text-blue-500 hover:text-blue-800 text-xs"
+        to={`/parts/${part._id}`}
+      >
         <button>View Controls</button>
       </Link>
-      {/* {part.controls.map((control) => (
-        <Control
-          key={control._id}
-          control={control}
-        />
-      ))} */}
     </div>
   );
 };

@@ -1,9 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { publicRoutes } from "./routes";
+import { useEventSource } from "./hooks";
 
 function App() {
+  useEventSource();
   return (
-    <div className="App">
+    <div className="m-4">
       <Routes>
         {publicRoutes.map((route) => {
           return (
