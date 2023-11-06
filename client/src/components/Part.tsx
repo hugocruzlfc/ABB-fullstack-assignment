@@ -1,6 +1,5 @@
 import React from "react";
 import { Part } from "../types";
-//import Control from "./Control";
 import { Link } from "react-router-dom";
 
 export interface PartProps {

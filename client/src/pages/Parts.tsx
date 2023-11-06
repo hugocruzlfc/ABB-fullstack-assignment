@@ -7,10 +7,16 @@ const Parts: React.FC<PartsProps> = () => {
   const parts = useAppStore((state) => state.parts);
 
   return (
-    <div>
-      <h1 className="flex justify-center uppercase">
-        ABB Full Stack Assignment
-      </h1>
+    <main>
+      <div>
+        <h1 className="flex justify-center uppercase">
+          ABB Full Stack Assignment
+        </h1>
+      </div>
+      <div className="mt-6">
+        <h2 className="flex justify-center uppercase">Parts</h2>
+        <p className="flex flex-row-reverse mr-6">Total: {parts.length}</p>
+      </div>
       <div className="grid grid-cols-4 gap-4 mt-8">
         {parts.map((part) => (
           <Part
@@ -19,7 +25,7 @@ const Parts: React.FC<PartsProps> = () => {
           />
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 
