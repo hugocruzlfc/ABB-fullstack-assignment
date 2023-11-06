@@ -1,14 +1,21 @@
-import React from "react";
-import { Control } from "../types";
+import React, { useEffect } from "react";
+import { Control, HEADER_COLORS } from "../types";
 import { usePaintHeader } from "../hooks";
 import HeaderIcon from "./HeaderIcon";
 
 export interface ControlProps {
   control: Control;
+  addColor: (color: HEADER_COLORS) => void;
+  // addColor: Dispatch<React.SetStateAction<HEADER_COLORS[]>>;
 }
 
-const Control: React.FC<ControlProps> = ({ control }) => {
+const Control: React.FC<ControlProps> = ({ control, addColor }) => {
   const { color, icon } = usePaintHeader(control);
+
+  useEffect(() => {
+    addColor(color);
+  }, [color, addColor]);
+
   return (
     <div className="bg-zinc-300 font-bold py-2 px-4 rounded my-4">
       <div

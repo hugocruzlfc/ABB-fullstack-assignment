@@ -1,14 +1,9 @@
-import { Control, HeaderIcon } from "../types";
+import { Control, HEADER_COLORS, HeaderIcon } from "../types";
 
 export interface PaintHeaderProps {
   control: Control;
+  addColor: (color: HEADER_COLORS) => void;
 }
-
-const HEADER_COLORS = {
-  green: "#4CAF50",
-  yellow: "#FFEB3B",
-  red: "#F44336",
-};
 
 export const usePaintHeader = (control: Control) => {
   const expectedIdealSize = control.expectedIdealSize;
@@ -23,10 +18,10 @@ export const usePaintHeader = (control: Control) => {
   const overRange = realSize < min || realSize > max; // red
 
   const color = allowedRange
-    ? HEADER_COLORS.yellow
+    ? HEADER_COLORS.YELLOW
     : overRange
-    ? HEADER_COLORS.red
-    : HEADER_COLORS.green;
+    ? HEADER_COLORS.RED
+    : HEADER_COLORS.GREEN;
 
   const icon = allowedRange
     ? HeaderIcon.WARNING
